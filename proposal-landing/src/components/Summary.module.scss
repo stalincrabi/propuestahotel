@@ -1,0 +1,28 @@
+@use '../styles/mixins' as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.item {
+    @include card;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+
+    p {
+        color: var(--text);
+        font-weight: 500;
+    }
+}
+
+.bullet {
+    color: var(--accent-1);
+    font-size: 1.5rem;
+    line-height: 1;
+}

@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Propuesta (Deck Landing) — Webflow Website + Booking System",
+    "preparedBy": "Graftly",
+    "hotel": "Hotel boutique (83 habitaciones) — Santa Eulària des Riu, Ibiza",
+    "opening": "Apertura estimada: 2027",
+    "investment": "$4,380 USD + $200 USD/mes"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "title": "Propuesta de Sitio Web Premium & Booking Distribution",
+      "subtitle": "Santa Eulària des Riu, Ibiza • 83 Habitaciones • Apertura 2027",
+      "cta": "Ver Propuesta"
+    },
+    {
+      "id": "summary",
+      "type": "summary",
+      "title": "Resumen ejecutivo",
+      "content": [
+        "Sitio premium en Webflow orientado a conversión (reservas directas).",
+        "Integración de motor de reservas (embed/script) + opción de channel manager.",
+        "SEO técnico y contenido para capturar demanda orgánica.",
+        "Enfoque en AIEO/AEO (contenido estructurado + schema).",
+        "Multidioma: Español, Inglés, Francés, Alemán."
+      ]
+    },
+    {
+      "id": "objectives",
+      "type": "objectives",
+      "title": "Objetivos del proyecto",
+      "cards": [
+        { "title": "Maximizar reservas directas", "desc": "Menos dependencia de OTAs cuando convenga." },
+        { "title": "Web rápida y editable", "desc": "Elegante y editable por el equipo sin depender de devs." },
+        { "title": "Preparar el terreno 2027", "desc": "Contenidos, estructura SEO y analítica listos." },
+        { "title": "Integración flexible", "desc": "Con PMS/booking del grupo, escalable." }
+      ]
+    },
+    {
+      "id": "webflow",
+      "type": "features",
+      "title": "Por qué Webflow (SEO, AIEO y operación)",
+      "items": [
+        {
+          "title": "SEO (control real)",
+          "desc": "Metadatos, reglas de indexación, redirects y performance nativo.",
+          "bullets": ["Arquitectura limpia", "Meta titles/descriptions", "Sitemap/robots", "Estrategia interlinking"]
+        },
+        {
+          "title": "AIEO/AEO (AI Search)",
+          "desc": "Web 'citable' por motores IA.",
+          "bullets": ["Bloques Q&A", "Contenido por intención", "Schema markup (Hotel, FAQ)"]
+        },
+        {
+          "title": "Multidioma (ES/EN/FR/DE)",
+          "desc": "Webflow Localization.",
+          "bullets": ["SEO localizado", "Routing automático"]
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "type": "comparison",
+      "title": "Booking & distribución",
+      "subtitle": "3 opciones recomendadas",
+      "recommendation": "Recomendación: Direct booking (Cloudbeds o Mews) + SiteMinder",
+      "options": [
+        {
+          "name": "Cloudbeds",
+          "tagline": "Ideal para hoteles independientes",
+          "desc": "Booking engine directo, mobile-first.",
+          "pros": ["Enfoque reservas directas", "Experiencia embebible", "Operación ágil"]
+        },
+        {
+          "name": "Mews",
+          "tagline": "Visibilidad + Modernidad",
+          "desc": "Widget integrable mediante script.",
+          "pros": ["Widgets integrables", "Upsells durante reserva", "Innovación UI"]
+        },
+        {
+          "name": "SiteMinder",
+          "tagline": "Optimizar ocupación",
+          "desc": "Conectividad con 450+ canales.",
+          "pros": ["Distribución amplia", "Sincronización total", "Evita overbookings"]
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "type": "list",
+      "title": "Alcance (UX/UI + Webflow + implementación)",
+      "columns": [
+        {
+          "title": "Diseño UX/UI",
+          "items": ["Wireframes (estructura, jerarquía)", "UI (estilo visual, componentes)", "Prototipo navegable"]
+        },
+        {
+          "title": "Implementación Webflow",
+          "items": ["Sistema de componentes", "CMS (habitaciones, experiencias)", "Formularios", "Integración booking"]
+        },
+        {
+          "title": "SEO & AIEO",
+          "items": ["Setup SEO por plantilla", "Schema base", "Plantilla contenidos"]
+        },
+        {
+          "title": "Multidioma",
+          "items": ["Estructura ES/EN/FR/DE", "SEO por idioma", "Selector y routing"]
+        }
+      ]
+    },
+    {
+      "id": "sitemap",
+      "type": "simple_list",
+      "title": "Arquitectura sugerida (sitemap)",
+      "items": [
+        "Home", "Habitaciones (listado + detalle)", "Experiencias", "Ubicación", 
+        "Galería", "Ofertas/Paquetes", "Blog/Guías (SEO + AIEO)", "Contacto", "Políticas"
+      ]
+    },
+    {
+      "id": "timeline",
+      "type": "timeline",
+      "title": "Cronograma propuesto",
+      "steps": [
+        "Kickoff & discovery",
+        "Wireframes",
+        "UI kit + diseño",
+        "Build en Webflow",
+        "Integración booking",
+        "QA + performance + SEO",
+        "Go-live + handoff"
+      ]
+    },
+    {
+      "id": "pricing",
+      "type": "pricing",
+      "title": "Inversión",
+      "plans": [
+        {
+          "title": "Proyecto (único)",
+          "price": "$4,380 USD",
+          "features": ["UX/UI", "Implementación Webflow", "Integración booking", "Consultoría"]
+        },
+        {
+          "title": "Soporte mensual",
+          "price": "$200 USD / mes",
+          "features": ["Cambios menores", "Mantenimiento", "Revisión performance/SEO", "Soporte operativo"]
+        }
+      ]
+    },
+    {
+      "id": "next_steps",
+      "type": "cta",
+      "title": "Próximos pasos",
+      "steps": [
+        "Definir booking stack (Cloudbeds / Mews / SiteMinder)",
+        "Reunir assets (logo, fotos, textos)",
+        "Arrancar con kickoff y wireframes"
+      ],
+      "contact": "Contacto: Graftly"
+    }
+  ]
+}

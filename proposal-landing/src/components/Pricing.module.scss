@@ -1,0 +1,50 @@
+@use '../styles/mixins' as *;
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    @include card;
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid var(--border);
+
+    &:first-child {
+        border-color: var(--accent-1);
+        background: linear-gradient(to bottom right, var(--surface), rgba(16, 185, 129, 0.05));
+    }
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    color: var(--text);
+}
+
+.features {
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+
+    li {
+        margin-bottom: 0.75rem;
+        position: relative;
+        padding-left: 1.5rem;
+        color: var(--text-muted);
+
+        &::before {
+            content: "•";
+            color: var(--accent-1);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    }
+}

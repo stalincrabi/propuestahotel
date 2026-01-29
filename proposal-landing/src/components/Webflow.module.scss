@@ -1,0 +1,33 @@
+@use '../styles/mixins' as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.item {
+    @include card;
+
+    h3 {
+        color: var(--accent-2);
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        font-weight: 500;
+        color: var(--text);
+    }
+
+    ul {
+        padding-left: 1rem;
+        list-style: disc;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+
+        li {
+            margin-bottom: 0.25rem;
+        }
+    }
+}
