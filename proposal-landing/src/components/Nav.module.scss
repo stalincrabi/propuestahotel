@@ -4,27 +4,56 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    /* More opaque */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid transparent;
+    /* Cleaner */
+    padding: 1.25rem 0;
+    transition: all 0.2s;
+
+    &.scrolled {
+        border-color: var(--border);
+        padding: 1rem 0;
+    }
 }
 
 .container {
-    @include container;
+    max-width: 1200px;
+    /* Wider nav */
+    margin: 0 auto;
+    padding: 0 2rem;
     @include flex-between;
 }
 
 .logo {
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
     font-size: 1.25rem;
-    letter-spacing: -0.05em;
-    color: var(--text);
+    letter-spacing: -0.02em;
+    color: var(--primary);
+    cursor: pointer;
+
+    /* Blue square logo hint */
+    &::before {
+        content: 'G';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--accent-blue);
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        font-size: 18px;
+    }
 }
 
 .links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
 
     @media (max-width: 768px) {
         display: none;
@@ -33,25 +62,27 @@
     a {
         font-size: 0.9rem;
         font-weight: 500;
-        color: var(--text-muted);
+        color: #64748B;
+        /* Slate 500 */
         transition: color 0.2s;
 
         &:hover {
-            color: var(--text);
+            color: var(--accent-blue);
         }
     }
 }
 
 .cta {
-    background: var(--text);
-    color: var(--bg);
-    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.6rem 1.25rem;
     border-radius: var(--radius-md);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 
     &:hover {
-        opacity: 0.9;
+        background: var(--accent-blue);
+        transform: translateY(-1px);
     }
 }

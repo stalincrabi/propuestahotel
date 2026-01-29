@@ -4,30 +4,116 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
-.item {
-    @include card;
+.card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    /* Colored top border inspired by 004.html */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--accent-blue);
+    }
+
+    &:nth-child(2)::before {
+        background: #8B5CF6;
+        /* Purple for middle card */
+    }
+
+    &:nth-child(3)::before {
+        background: #6366F1;
+        /* Indigo for last card */
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        border-color: var(--accent-blue-light);
+    }
 
     h3 {
-        color: var(--accent-2);
-        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        color: var(--primary);
+        transition: color 0.3s;
     }
 
-    p {
-        margin-bottom: 1rem;
-        font-weight: 500;
-        color: var(--text);
+    &:hover h3 {
+        color: var(--accent-blue);
     }
+}
 
-    ul {
-        padding-left: 1rem;
-        list-style: disc;
-        color: var(--text-muted);
+.iconBox {
+    width: 56px;
+    height: 56px;
+    background: var(--accent-blue-light);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-blue);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover .iconBox {
+    transform: scale(1.1);
+    background: var(--accent-blue);
+    color: white;
+}
+
+.card:nth-child(2) .iconBox {
+    background: #F3E8FF;
+    /* Purple 50 */
+    color: #8B5CF6;
+}
+
+.card:nth-child(2):hover .iconBox {
+    background: #8B5CF6;
+    color: white;
+}
+
+.card:nth-child(3) .iconBox {
+    background: #EEF2FF;
+    /* Indigo 50 */
+    color: #6366F1;
+}
+
+.card:nth-child(3):hover .iconBox {
+    background: #6366F1;
+    color: white;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+}
+
+.list {
+    li {
         font-size: 0.9rem;
-
-        li {
-            margin-bottom: 0.25rem;
-        }
+        margin-bottom: 0.5rem;
+        color: var(--text);
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
     }
 }

@@ -1,28 +1,36 @@
 :root {
   /* Colors */
-  --bg: #F9FAFB; /* Light gray/white background for clean look */
+  --bg: #F9FAFB;
+  /* Light gray/white background for clean look */
   --surface: #FFFFFF;
   --text: #111827;
   --text-muted: #6B7280;
   --border: #E5E7EB;
-  
-  /* Brand/Accent Colors (Graftly inspired) */
+
+  /* Brand/Accent Colors (Graftly Reference) */
   --primary: #111827;
-  --accent-1: #10B981; /* Emerald green */
-  --accent-2: #3B82F6; /* Blue */
-  --accent-3: #8B5CF6; /* Violet */
+  --accent-blue: #2563EB;
+  /* Vivid Blue from reference */
+  --accent-blue-light: #EFF6FF;
+  /* Very light blue for backgrounds */
+  --accent-1: #2563EB;
+  /* Re-mapped to blue */
+  --accent-2: #3B82F6;
+  --accent-3: #8B5CF6;
 
   /* Spacing & Radius */
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-xl: 1.25rem;
+  /* Larger radius as seen in images */
   --radius-2xl: 1.5rem;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.04);
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -33,7 +41,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-sans);
-  background-color: var(--bg);
+  background-color: #F8F9FC;
+  /* Very subtle cool gray/blue tint for background */
   color: var(--text);
   scroll-behavior: smooth;
   line-height: 1.5;
@@ -49,16 +58,23 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--text);
+  letter-spacing: -0.02em;
+  /* Slightly tighter */
+  color: var(--primary);
 }
 
 p {
   margin: 0;
   color: var(--text-muted);
+  line-height: 1.6;
 }
 
 ul {
@@ -74,9 +90,24 @@ button {
   font-family: inherit;
 }
 
+/* Badge Utility */
+.badge {
+  display: inline-block;
+  background: var(--accent-blue-light);
+  color: var(--accent-blue);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
 .container {
   width: 100%;
-  max-width: 1000px; /* More condensed for deck feel */
+  max-width: 1000px;
+  /* More condensed for deck feel */
   margin: 0 auto;
   padding: 0 1.5rem;
 }

@@ -8,10 +8,46 @@ export default function Hero() {
 
     return (
         <section id="hero" className={styles.hero}>
-            <div className={styles.content}>
-                <h1 className={styles.title}>{hero.title}</h1>
-                <p className={styles.subtitle}>{hero.subtitle}</p>
-                <a href="#objectives" className={styles.button}>{hero.cta}</a>
+            <div className={styles.container}>
+                <div className={styles.content}>
+                    <div className={styles.badgeWrapper}>
+                        <span className="badge">Deck Landing</span>
+                    </div>
+                    <h1 className={styles.title}>
+                        Webflow Website <br />
+                        <span className={styles.highlight}>+ Booking System</span>
+                    </h1>
+
+                    <div className={styles.meta}>
+                        <div className={styles.metaItem}>
+                            <span className={styles.icon}>🏨</span>
+                            <div>
+                                <strong>{data.meta.hotel}</strong>
+                            </div>
+                        </div>
+                        <div className={styles.metaItem}>
+                            <span className={styles.icon}>🗓️</span>
+                            <div>{data.meta.opening}</div>
+                        </div>
+                    </div>
+
+                    <div className={styles.investment}>
+                        <div className={styles.priceBlock}>
+                            <small>Inversión Estimada</small>
+                            <div className={styles.price}>$4,380 USD <span className={styles.sub}>Proyecto Único</span></div>
+                        </div>
+                        <div className={styles.priceBlock}>
+                            <small>Soporte & Webmaster</small>
+                            <div className={styles.price}>$200 USD <span className={styles.sub}>/ mes</span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className={styles.visual}>
+                    {/* Placeholder for the hotel image show in reference */}
+                    <div className={styles.imageCard}></div>
+                </div>
             </div>
         </section>
     );
