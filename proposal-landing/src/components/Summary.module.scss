@@ -1,28 +1,192 @@
 @use '../styles/mixins' as *;
 
-.grid {
+.layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
+    grid-template-columns: 1.75fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
 
-.item {
-    @include card;
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding: 1.5rem;
-
-    p {
-        color: var(--text);
-        font-weight: 500;
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
     }
 }
 
-.bullet {
-    color: var(--accent-1);
-    font-size: 1.5rem;
-    line-height: 1;
+/* Left: 2x2 Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: #F8FAFC;
+    /* Slate 50 */
+    padding: 1.5rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+
+    &:hover {
+        border-color: #DBEAFE;
+        /* Blue 100 */
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: var(--text-muted);
+    }
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #E5E7EB;
+}
+
+/* Right: Dark Sidebar */
+.sidebar {
+    background: #1E293B;
+    /* Slate 800 */
+    color: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    /* Decorative elements */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 16rem;
+        height: 16rem;
+        background: #334155;
+        border-radius: 0 0 0 100%;
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 12rem;
+        height: 12rem;
+        background: #1E40AF;
+        border-radius: 0 100% 0 0;
+        opacity: 0.2;
+        z-index: 0;
+    }
+
+    >* {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.sidebarTitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #93C5FD;
+    /* Blue 300 */
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #334155;
+}
+
+.objectives {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: auto;
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateX(4px);
+        }
+    }
+}
+
+.objectiveIcon {
+    margin-top: 0.25rem;
+    color: #6EE7B7;
+    /* Emerald 300 */
+    font-size: 1.25rem;
+    transition: transform 0.3s;
+
+    li:hover & {
+        transform: scale(1.1);
+    }
+}
+
+.objectives li {
+    strong {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0.25rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        color: #94A3B8;
+        /* Slate 400 */
+        line-height: 1.5;
+    }
+}
+
+.quote {
+    margin-top: 2rem;
+    background: rgba(51, 65, 85, 0.5);
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--accent-blue);
+    backdrop-filter: blur(4px);
+
+    i {
+        color: var(--accent-blue);
+        margin-right: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        font-style: italic;
+        color: #CBD5E1;
+        /* Slate 300 */
+        line-height: 1.6;
+    }
 }

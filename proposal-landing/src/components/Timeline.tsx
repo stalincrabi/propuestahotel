@@ -1,29 +1,57 @@
 import Section from './Section';
 import styles from './Timeline.module.scss';
 
-// Steps data hardcoded or from JSON, tailored to match the image
-const steps = [
-    { id: 1, title: 'Definir Stack', desc: 'Selección final: Cloudbeds, Mews o SiteMinder.' },
-    { id: 2, title: 'Assets', desc: 'Recopilación de logo, brand book, fotos y textos base.' },
-    { id: 3, title: 'Kickoff & UI', desc: 'Reunión de arranque y diseño de wireframes/prototipo.' },
-    { id: 4, title: 'Build & Integ.', desc: 'Desarrollo en Webflow, CMS e integración del booking engine.' },
-    { id: 5, title: 'QA & Go-Live', desc: 'Tests de rendimiento, revisión SEO y lanzamiento oficial.', isFinal: true }
-];
-
 export default function Timeline() {
+    const steps = [
+        {
+            number: 1,
+            title: "Definir Stack",
+            desc: "Selección final: Cloudbeds, Mews o SiteMinder."
+        },
+        {
+            number: 2,
+            title: "Assets",
+            desc: "Recopilación de logo, brand book, fotos y textos base."
+        },
+        {
+            number: 3,
+            title: "Kickoff & UI",
+            desc: "Reunión de arranque y diseño de wireframes/prototipo."
+        },
+        {
+            number: 4,
+            title: "Build & Integ.",
+            desc: "Desarrollo en Webflow, CMS e integración del booking engine."
+        },
+        {
+            number: 5,
+            title: "QA & Go-Live",
+            desc: "Tests de rendimiento, revisión SEO y lanzamiento oficial.",
+            isFinal: true
+        }
+    ];
+
     return (
-        <Section id="roadmap" title="Próximos Pasos" subtitle="Ruta crítica para el lanzamiento de la plataforma digital.">
-            <div className={styles.roadmap}>
+        <Section id="timeline" title="Próximos Pasos" subtitle="Roadmap de Ejecución">
+            <p className={styles.intro}>
+                Ruta crítica para el lanzamiento de la plataforma digital.
+            </p>
+
+            <div className={styles.timeline}>
                 <div className={styles.line}></div>
-                {steps.map((step) => (
-                    <div key={step.id} className={`${styles.step} ${step.isFinal ? styles.final : ''}`}>
-                        <div className={styles.marker}>
-                            {step.isFinal ? '🏁' : step.id}
+                <div className={styles.lineFill}></div>
+
+                <div className={styles.steps}>
+                    {steps.map((step) => (
+                        <div key={step.number} className={styles.step}>
+                            <div className={`${styles.circle} ${step.isFinal ? styles.circleFinal : ''}`}>
+                                {step.isFinal ? <i className="fa-solid fa-flag-checkered"></i> : step.number}
+                            </div>
+                            <h3 className={styles.stepTitle}>{step.title}</h3>
+                            <p className={styles.stepDesc}>{step.desc}</p>
                         </div>
-                        <h4 className={styles.title}>{step.title}</h4>
-                        <p className={styles.desc}>{step.desc}</p>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </Section>
     );

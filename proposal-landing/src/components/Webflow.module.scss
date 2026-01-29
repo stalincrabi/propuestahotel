@@ -1,5 +1,14 @@
 @use '../styles/mixins' as *;
 
+.intro {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -108,12 +117,40 @@
 }
 
 .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
     li {
         font-size: 0.9rem;
-        margin-bottom: 0.5rem;
         color: var(--text);
         display: flex;
-        gap: 0.5rem;
-        align-items: center;
+        gap: 0.75rem;
+        align-items: flex-start;
+
+        i {
+            color: #10B981;
+            /* Emerald 500 */
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.footer {
+    margin-top: 2.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #F1F5F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+
+    i {
+        color: var(--accent-blue);
     }
 }
