@@ -1,3 +1,4 @@
+import Section from './Section';
 import styles from './Scope.module.scss';
 import data from '@/content/proposal.es.json';
 
@@ -8,7 +9,7 @@ const icons: any = {
     "Webflow": "🏗️",
     "Booking": "📅",
     "SEO": "🔍",
-    "Multidioma": "AZ",
+    "Multidioma": "🌐",
     "QA": "📋"
 };
 
@@ -16,38 +17,49 @@ export default function Scope() {
     if (!scope) return null;
 
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.header}>
-                <div className={styles.line}></div>
-                <small className={styles.small}>DETALLES DE IMPLEMENTACIÓN</small>
-                <h2 className={styles.title}>{scope.title}</h2>
-                <p className={styles.subtitle}>Desglose detallado de los entregables para el lanzamiento en 2027.</p>
+        <Section id="alcance" title={scope.title} subtitle={scope.subtitle}>
+            {/* Inclusions */}
+            <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>
+                    <i className="fa-solid fa-circle-check"></i> Qué SÍ Incluye
+                </h3>
+                <div className={styles.grid}>
+                    {scope.includes.map((item: any, i: number) => {
+                        const key = Object.keys(icons).find(k => item.title.includes(k)) || "✨";
+                        return (
+                            <div key={i} className={styles.item}>
+                                <div className={styles.icon}>{icons[key]}</div>
+                                <div className={styles.content}>
+                                    <h4>{item.title}</h4>
+                                    <p>{item.items.join('. ')}.</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
 
-            <div className={styles.grid}>
-                {scope.columns.map((col: any, i: number) => {
-                    // Heuristic to match icon
-                    const key = Object.keys(icons).find(k => col.title.includes(k)) || "✨";
-                    return (
-                        <div key={i} className={styles.item}>
-                            <div className={styles.icon}>{icons[key]}</div>
-                            <div className={styles.content}>
-                                <h3>{col.title}</h3>
-                                <p>
-                                    {col.items.join('. ')}.
-                                </p>
+            {/* Exclusions */}
+            <div className={styles.section}>
+                <h3 className={styles.sectionTitle + ' ' + styles.exclusions}>
+                    <i className="fa-solid fa-circle-xmark"></i> Qué NO Incluye (Debes Proveer o Contratar Aparte)
+                </h3>
+                <div className={styles.exclusionsList}>
+                    {scope.excludes.map((item: string, i: number) => (
+                        <div key={i} className={styles.exclusionItem}>
+                            <div className={styles.exclusionHeader}>
+                                <i className="fa-solid fa-xmark"></i>
+                                <strong>{item.split(' — ')[0]}</strong>
                             </div>
+                            <p>{item.split(' — ')[1] || item}</p>
                         </div>
-                    )
-                })}
+                    ))}
+                </div>
             </div>
 
             <div className={styles.time}>
-                <span>🕒</span> Tiempo estimado: <strong>4-6 semanas</strong>
+                <span>🕒</span> Tiempo estimado: <strong>{scope.timeline}</strong>
             </div>
-            <div className={styles.consulting}>
-                <span>🤝</span> Consultoría estratégica incluida
-            </div>
-        </div>
+        </Section>
     );
 }

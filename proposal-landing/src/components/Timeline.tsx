@@ -1,38 +1,14 @@
 import Section from './Section';
 import styles from './Timeline.module.scss';
+import data from '@/content/proposal.es.json';
+
+const timeline = data.sections.find((s: any) => s.id === 'timeline') as any;
 
 export default function Timeline() {
-    const steps = [
-        {
-            number: 1,
-            title: "Definir Stack",
-            desc: "Selección final: Cloudbeds, Mews o SiteMinder."
-        },
-        {
-            number: 2,
-            title: "Assets",
-            desc: "Recopilación de logo, brand book, fotos y textos base."
-        },
-        {
-            number: 3,
-            title: "Kickoff & UI",
-            desc: "Reunión de arranque y diseño de wireframes/prototipo."
-        },
-        {
-            number: 4,
-            title: "Build & Integ.",
-            desc: "Desarrollo en Webflow, CMS e integración del booking engine."
-        },
-        {
-            number: 5,
-            title: "QA & Go-Live",
-            desc: "Tests de rendimiento, revisión SEO y lanzamiento oficial.",
-            isFinal: true
-        }
-    ];
+    if (!timeline) return null;
 
     return (
-        <Section id="timeline" title="Próximos Pasos" subtitle="Roadmap de Ejecución">
+        <Section id="timeline" title={timeline.title} subtitle={timeline.subtitle}>
             <p className={styles.intro}>
                 Ruta crítica para el lanzamiento de la plataforma digital.
             </p>
@@ -42,13 +18,21 @@ export default function Timeline() {
                 <div className={styles.lineFill}></div>
 
                 <div className={styles.steps}>
-                    {steps.map((step) => (
-                        <div key={step.number} className={styles.step}>
+                    {timeline.steps.map((step: any, index: number) => (
+                        <div key={index} className={styles.step}>
                             <div className={`${styles.circle} ${step.isFinal ? styles.circleFinal : ''}`}>
-                                {step.isFinal ? <i className="fa-solid fa-flag-checkered"></i> : step.number}
+                                {step.isFinal ? <i className="fa-solid fa-flag-checkered"></i> : index + 1}
                             </div>
-                            <h3 className={styles.stepTitle}>{step.title}</h3>
+                            <h3 className={styles.stepTitle}>
+                                {step.title}
+                                {step.duration && <span className={styles.duration}> ({step.duration})</span>}
+                            </h3>
                             <p className={styles.stepDesc}>{step.desc}</p>
+                            {step.needs && (
+                                <div className={styles.clientNeeds}>
+                                    <strong>Necesitas proveer:</strong> {step.needs}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>

@@ -8,7 +8,11 @@ export default function Comparison() {
     if (!booking) return null;
 
     return (
-        <Section id="booking" title="3 Opciones Recomendadas" subtitle="Booking & Distribución">
+        <Section id="comparison" title={booking.title} subtitle={booking.subtitle}>
+            <p className={styles.intro}>
+                {booking.intro}
+            </p>
+
             <div className={styles.grid}>
                 {booking.options.map((option: any, i: number) => (
                     <div key={i} className={styles.card}>
@@ -30,9 +34,21 @@ export default function Comparison() {
                                 </li>
                             ))}
                         </ul>
+                        {option.criteria && (
+                            <div className={styles.criteria}>
+                                <strong>Cuándo conviene:</strong> {option.criteria}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
+
+            {booking.important && (
+                <div className={styles.important}>
+                    <i className="fa-solid fa-circle-exclamation"></i>
+                    <p><strong>Importante:</strong> {booking.important}</p>
+                </div>
+            )}
 
             <div className={styles.recommendationWrapper}>
                 <div className={styles.icon}>
@@ -40,15 +56,7 @@ export default function Comparison() {
                 </div>
                 <div className={styles.recText}>
                     <h4>Recomendación Práctica (Setup Típico)</h4>
-                    <p>
-                        Combinar <strong>Direct Booking (Cloudbeds o Mews)</strong> para la web + <strong>SiteMinder</strong> para gestionar la distribución en OTAs.
-                    </p>
-                </div>
-                <div className={styles.result}>
-                    <p>Resultado</p>
-                    <p>
-                        <i className="fa-solid fa-arrow-trend-up"></i> Max. ROI
-                    </p>
+                    <p>{booking.recommendation}</p>
                 </div>
             </div>
         </Section>

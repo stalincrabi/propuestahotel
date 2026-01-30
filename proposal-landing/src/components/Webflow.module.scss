@@ -9,6 +9,67 @@
     line-height: 1.6;
 }
 
+.comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.comparisonCard {
+    background: #F8FAFC;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid #E5E7EB;
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text);
+
+            i {
+                margin-top: 0.25rem;
+                font-size: 0.875rem;
+                color: #EF4444;
+                /* Red for X marks */
+            }
+        }
+    }
+
+    &.highlight {
+        background: white;
+        border-color: var(--accent-blue);
+        box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1);
+
+        h4 {
+            color: var(--accent-blue);
+        }
+
+        ul li i {
+            color: #10B981;
+            /* Green for checkmarks */
+        }
+    }
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -134,6 +195,36 @@
             font-size: 0.75rem;
             margin-top: 0.25rem;
             flex-shrink: 0;
+        }
+    }
+}
+
+.aieoResult {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    background: rgba(59, 130, 246, 0.05);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 0.875rem;
+    align-items: flex-start;
+
+    i {
+        color: var(--accent-blue);
+        font-size: 1.125rem;
+        margin-top: 0.125rem;
+        flex-shrink: 0;
+    }
+
+    p {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        color: var(--text-muted);
+        margin: 0;
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
         }
     }
 }

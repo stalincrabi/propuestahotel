@@ -10,20 +10,19 @@
     {
       "id": "hero",
       "type": "hero",
-      "title": "Propuesta de Sitio Web Premium & Booking Distribution",
-      "subtitle": "Santa Eulària des Riu, Ibiza • 83 Habitaciones • Apertura 2027",
-      "cta": "Ver Propuesta"
+      "title": "Tu Sitio Web Listo para 2027",
+      "subtitle": "Propuesta completa para el lanzamiento digital de tu hotel boutique en Ibiza: diseño premium, motor de reservas integrado y estrategia SEO/AIEO para capturar demanda desde el día uno.",
+      "cta": "Ver Alcance Completo"
     },
     {
       "id": "summary",
       "type": "summary",
-      "title": "Resumen ejecutivo",
+      "title": "El Desafío: Lanzar en 2027 con Ventaja Competitiva",
+      "subtitle": "Hotel boutique de 83 habitaciones en Santa Eulària des Riu, Ibiza. Apertura estimada 2027.",
       "content": [
-        "Sitio premium en Webflow orientado a conversión (reservas directas).",
-        "Integración de motor de reservas (embed/script) + opción de channel manager.",
-        "SEO técnico y contenido para capturar demanda orgánica.",
-        "Enfoque en AIEO/AEO (contenido estructurado + schema).",
-        "Multidioma: Español, Inglés, Francés, Alemán."
+        "Problema: Los hoteles pierden 15-25% en comisiones OTA y dependen de plataformas que controlan la relación con el huésped.",
+        "Oportunidad: Lanzar con un sitio web premium que capture demanda anticipada y maximice reservas directas desde el día uno.",
+        "Estrategia: Webflow + motor de reservas + SEO/AIEO + multidioma = activo digital robusto antes de abrir puertas."
       ]
     },
     {
@@ -31,134 +30,299 @@
       "type": "objectives",
       "title": "Objetivos del proyecto",
       "cards": [
-        { "title": "Maximizar reservas directas", "desc": "Menos dependencia de OTAs cuando convenga." },
-        { "title": "Web rápida y editable", "desc": "Elegante y editable por el equipo sin depender de devs." },
-        { "title": "Preparar el terreno 2027", "desc": "Contenidos, estructura SEO y analítica listos." },
-        { "title": "Integración flexible", "desc": "Con PMS/booking del grupo, escalable." }
+        {
+          "title": "Maximizar Reservas Directas",
+          "desc": "Reducir coste de adquisición (CAC) y dependencia de comisiones OTA. Cada reserva directa ahorra 15-25% en comisiones."
+        },
+        {
+          "title": "Analítica Configurada",
+          "desc": "GA4, eventos de reserva y seguimiento de conversiones listos desde día 1. Datos claros para optimizar campañas antes de la apertura."
+        },
+        {
+          "title": "Autonomía de Marketing",
+          "desc": "Equipo puede editar contenido, precios y promociones sin tickets técnicos. Agilidad para responder al mercado."
+        },
+        {
+          "title": "Ventaja Competitiva",
+          "desc": "La mayoría de hoteles construyen su web después de abrir. Tú tendrás un activo digital funcionando antes de 2027, capturando pre-reservas."
+        }
       ]
     },
     {
       "id": "webflow",
       "type": "features",
-      "title": "Por qué Webflow (SEO, AIEO y operación)",
+      "title": "Por qué Webflow (y no WordPress, Wix o Squarespace)",
+      "subtitle": "Tecnología que Escala con tu Negocio",
       "items": [
         {
-          "title": "SEO (control real)",
-          "desc": "Metadatos, reglas de indexación, redirects y performance nativo.",
-          "bullets": ["Arquitectura limpia", "Meta titles/descriptions", "Sitemap/robots", "Estrategia interlinking"]
+          "title": "SEO Técnico (Control Real)",
+          "desc": "Webflow permite controlar cada aspecto de la indexación sin capas extra de software ni plugins vulnerables.",
+          "bullets": [
+            "Metadatos nativos por CMS — cada página tiene su propio título, descripción y OG tags sin plugins",
+            "Redirects 301 sin plugins — gestión directa de redirecciones",
+            "Carga ultrarrápida — hosting en AWS con CDN global (Core Web Vitals optimizados)",
+            "Sin actualizaciones rotas — a diferencia de WordPress, no hay plugins que actualizar cada semana"
+          ]
         },
         {
-          "title": "AIEO/AEO (AI Search)",
-          "desc": "Web 'citable' por motores IA.",
-          "bullets": ["Bloques Q&A", "Contenido por intención", "Schema markup (Hotel, FAQ)"]
+          "title": "AIEO / AEO (Optimización para Motores con IA)",
+          "desc": "Además de SEO tradicional, estructuramos contenido para que buscadores con IA (ChatGPT, Gemini, Perplexity) puedan entender y recomendar mejor el hotel.",
+          "bullets": [
+            "Schema Markup (Hotel/FAQ) — datos estructurados que los modelos de IA pueden leer",
+            "Contenido Q&A estructurado — preguntas frecuentes que los asistentes pueden citar",
+            "Ejemplos: ¿Cuál es la política de cancelación? ¿Cómo llegar desde el aeropuerto? ¿Mejor temporada para visitar?",
+            "Resultado: Cuando alguien pregunta a ChatGPT 'recomiéndame un hotel boutique en Ibiza', tu hotel puede aparecer"
+          ]
         },
         {
-          "title": "Multidioma (ES/EN/FR/DE)",
-          "desc": "Webflow Localization.",
-          "bullets": ["SEO localizado", "Routing automático"]
+          "title": "Multidioma Nativo (ES/EN/FR/DE)",
+          "desc": "Gestión de 4 idiomas desde una única interfaz visual, sin plugins de terceros.",
+          "bullets": [
+            "URLs únicas por idioma — /es/habitaciones, /en/rooms, /fr/chambres, /de/zimmer",
+            "Routing automático — detecta idioma del navegador y redirige",
+            "SEO localizado independiente — cada idioma tiene sus propios metadatos y sitemap",
+            "Sin plugins vulnerables — todo nativo en Webflow (a diferencia de WordPress con WPML)"
+          ]
+        },
+        {
+          "title": "CMS Visual",
+          "desc": "Sistema de gestión de contenido sin código para tu equipo — actualiza habitaciones, ofertas y blog sin depender de desarrolladores.",
+          "bullets": [
+            "Editor visual — tu staff actualiza habitaciones, ofertas y blog sin tocar código",
+            "Colecciones dinámicas — habitaciones, experiencias, testimonios se gestionan como base de datos",
+            "Multiidioma integrado — edita contenido en ES/EN/FR/DE desde el mismo panel",
+            "Sin dependencia técnica — reduces costos de mantenimiento al no necesitar desarrollador para cambios de contenido"
+          ]
         }
       ]
     },
     {
       "id": "booking",
       "type": "comparison",
-      "title": "Booking & distribución",
-      "subtitle": "3 opciones recomendadas",
-      "recommendation": "Recomendación: Direct booking (Cloudbeds o Mews) + SiteMinder",
+      "title": "Motor de Reservas: 3 Opciones Recomendadas",
+      "subtitle": "Booking & Distribución: Elige Según tu Estrategia",
+      "intro": "Las 3 plataformas se integran con Webflow mediante widgets embebibles o scripts. La elección depende de si priorizas reservas directas, modernidad o distribución multicanal.",
+      "recommendation": "Combinar Direct Booking (Cloudbeds o Mews) para la web + SiteMinder para gestionar la distribución en OTAs. Resultado: Capturas reservas directas (sin comisión) en tu web, mientras mantienes presencia en OTAs para llenar ocupación restante.",
       "options": [
         {
           "name": "Cloudbeds",
           "tagline": "Ideal para hoteles independientes",
-          "desc": "Booking engine directo, mobile-first.",
-          "pros": ["Enfoque reservas directas", "Experiencia embebible", "Operación ágil"]
+          "desc": "Booking engine directo, mobile-first, con enfoque en experiencia del huésped.",
+          "pros": [
+            "Enfoque reservas directas — motor optimizado para conversión en tu web",
+            "Experiencia embebible — widget que se integra visualmente con tu diseño",
+            "Operación ágil — PMS + Channel Manager + Booking Engine en una plataforma"
+          ],
+          "criteria": "Si tu estrategia es reducir dependencia de OTAs y construir relación directa con huéspedes."
         },
         {
           "name": "Mews",
-          "tagline": "Visibilidad + Modernidad",
-          "desc": "Widget integrable mediante script.",
-          "pros": ["Widgets integrables", "Upsells durante reserva", "Innovación UI"]
+          "tagline": "Ideal para modernidad y automatización",
+          "desc": "Widget integrable mediante script, con enfoque en innovación UI y upsells durante reserva.",
+          "pros": [
+            "Widgets integrables — loader script que se adapta a tu diseño",
+            "Upsells durante reserva — upgrades de habitación, early check-in, late check-out",
+            "Innovación UI — interfaz moderna y fluida (según Mews Booking Engine docs)"
+          ],
+          "criteria": "Si quieres una experiencia de reserva premium y maximizar revenue por huésped."
         },
         {
           "name": "SiteMinder",
-          "tagline": "Optimizar ocupación",
-          "desc": "Conectividad con 450+ canales.",
-          "pros": ["Distribución amplia", "Sincronización total", "Evita overbookings"]
+          "tagline": "Ideal para distribución multicanal",
+          "desc": "Enfoque en channel manager con conectividad a 450+ canales/OTAs (según SiteMinder).",
+          "pros": [
+            "Distribución amplia — conecta con Booking.com, Expedia, Airbnb, etc.",
+            "Sincronización total — inventario y precios actualizados en tiempo real",
+            "Evita overbookings — gestión centralizada de disponibilidad"
+          ],
+          "criteria": "Si tu estrategia es maximizar ocupación distribuyendo en múltiples canales."
         }
-      ]
+      ],
+      "important": "Las licencias de estas plataformas NO están incluidas en la propuesta. Tú contratas directamente con el proveedor que elijas."
     },
     {
       "id": "scope",
       "type": "list",
-      "title": "Alcance (UX/UI + Webflow + implementación)",
-      "columns": [
+      "title": "Alcance: Qué Incluye (y Qué No)",
+      "subtitle": "Desglose Completo de Entregables",
+      "includes": [
         {
           "title": "Diseño UX/UI",
-          "items": ["Wireframes (estructura, jerarquía)", "UI (estilo visual, componentes)", "Prototipo navegable"]
+          "items": [
+            "Wireframes — estructura de páginas (Home, Habitaciones, Experiencias, Contacto)",
+            "UI Design — estilo visual, componentes, paleta de color, tipografía",
+            "Prototipo navegable — preview interactivo antes de desarrollo"
+          ]
         },
         {
           "title": "Implementación Webflow",
-          "items": ["Sistema de componentes", "CMS (habitaciones, experiencias)", "Formularios", "Integración booking"]
+          "items": [
+            "Sistema de componentes — header, footer, cards, CTAs reutilizables",
+            "CMS — colección de habitaciones, experiencias, blog (editable por ti)",
+            "Formularios — contacto, newsletter, solicitud de reserva",
+            "Integración booking — embed del widget de Cloudbeds/Mews/SiteMinder"
+          ]
         },
         {
           "title": "SEO & AIEO",
-          "items": ["Setup SEO por plantilla", "Schema base", "Plantilla contenidos"]
+          "items": [
+            "Setup SEO por plantilla — metadatos, OG tags, Twitter cards",
+            "Schema Markup base — Hotel, LocalBusiness, FAQ",
+            "Plantilla de contenidos — guía de qué escribir para cada página (tú escribes el contenido final)"
+          ]
         },
         {
           "title": "Multidioma",
-          "items": ["Estructura ES/EN/FR/DE", "SEO por idioma", "Selector y routing"]
+          "items": [
+            "Estructura ES/EN/FR/DE — routing, URLs localizadas, hreflang tags",
+            "SEO por idioma — metadatos independientes por idioma",
+            "Selector y routing — detección automática + selector manual"
+          ]
+        },
+        {
+          "title": "Analítica & Tracking",
+          "items": [
+            "Google Analytics 4 — configuración base",
+            "Eventos de conversión — tracking de clics en booking, formularios, newsletter",
+            "Google Tag Manager — setup para futuros tags de marketing"
+          ]
         }
-      ]
-    },
-    {
-      "id": "sitemap",
-      "type": "simple_list",
-      "title": "Arquitectura sugerida (sitemap)",
-      "items": [
-        "Home", "Habitaciones (listado + detalle)", "Experiencias", "Ubicación", 
-        "Galería", "Ofertas/Paquetes", "Blog/Guías (SEO + AIEO)", "Contacto", "Políticas"
-      ]
+      ],
+      "excludes": [
+        "Licencias de booking engine — Cloudbeds/Mews/SiteMinder se contratan directamente",
+        "Traducciones — si no provees contenido en los 4 idiomas, podemos cotizar traducción aparte",
+        "Producción de fotos — necesitamos que proveas fotos profesionales del hotel (o cotizamos sesión aparte)",
+        "Integraciones custom — si necesitas conectar con CRM, email marketing, etc., se cotiza aparte",
+        "Licencia Webflow — tú pagas la licencia mensual de Webflow (aprox. $29-42/mes según plan)"
+      ],
+      "timeline": "8-10 semanas"
     },
     {
       "id": "timeline",
       "type": "timeline",
-      "title": "Cronograma propuesto",
+      "title": "Plan de Ejecución & Timeline",
+      "subtitle": "Roadmap de Lanzamiento (8-10 semanas)",
       "steps": [
-        "Kickoff & discovery",
-        "Wireframes",
-        "UI kit + diseño",
-        "Build en Webflow",
-        "Integración booking",
-        "QA + performance + SEO",
-        "Go-live + handoff"
+        {
+          "phase": "Fase 1",
+          "title": "Definir Stack",
+          "duration": "Semana 1",
+          "desc": "Selección final: Cloudbeds, Mews o SiteMinder. Confirmación de licencias y accesos.",
+          "needs": "Decisión de booking engine. Acceso a cuenta (si ya la tienes)."
+        },
+        {
+          "phase": "Fase 2",
+          "title": "Assets & Brand",
+          "duration": "Semana 1-2",
+          "desc": "Recopilación de logo, brand book, paleta de color, tipografía. Fotos base (mínimo 20-30 fotos profesionales). Textos base por página.",
+          "needs": "Logo en vectores (.svg, .ai, .eps). Brand guidelines (si existen). Fotos del hotel o referencias visuales. Contenido en español."
+        },
+        {
+          "phase": "Fase 3",
+          "title": "Kickoff & UI Design",
+          "duration": "Semana 2-4",
+          "desc": "Reunión de arranque (1-2 hrs). Wireframes de páginas clave. UI Design (2 rondas de revisión). Prototipo navegable en Figma.",
+          "needs": "Feedback en máx. 48 hrs por ronda."
+        },
+        {
+          "phase": "Fase 4",
+          "title": "Build & Integración",
+          "duration": "Semana 5-8",
+          "desc": "Desarrollo en Webflow. CMS configurado. Integración de booking engine. Multidioma implementado. SEO/AIEO base.",
+          "needs": "Contenido final en los 4 idiomas (o cotizamos traducción). Acceso a cuenta de booking engine para integración."
+        },
+        {
+          "phase": "Fase 5",
+          "title": "QA & Go-Live",
+          "duration": "Semana 9-10",
+          "desc": "Tests de rendimiento (Core Web Vitals). Revisión SEO (metadatos, sitemaps, redirects). Tests de booking en staging. Lanzamiento oficial. Capacitación (1 hr).",
+          "needs": "Aprobación final. Acceso a dominio para apuntar DNS."
+        }
       ]
     },
     {
       "id": "pricing",
       "type": "pricing",
       "title": "Inversión",
+      "subtitle": "Propuesta Económica Transparente",
       "plans": [
         {
-          "title": "Proyecto (único)",
+          "title": "Proyecto Completo",
           "price": "$4,380 USD",
-          "features": ["UX/UI", "Implementación Webflow", "Integración booking", "Consultoría"]
+          "type": "one-time",
+          "features": [
+            "Diseño UX/UI completo (wireframes + UI + prototipo)",
+            "Implementación Webflow (desarrollo + CMS + integración booking)",
+            "SEO & AIEO base (metadatos + Schema Markup + plantilla contenidos)",
+            "Multidioma (ES/EN/FR/DE con SEO localizado)",
+            "Analítica & tracking (GA4 + GTM + eventos)",
+            "Capacitación (1 hr para que puedas editar contenido)"
+          ]
         },
         {
-          "title": "Soporte mensual",
-          "price": "$200 USD / mes",
-          "features": ["Cambios menores", "Mantenimiento", "Revisión performance/SEO", "Soporte operativo"]
+          "title": "Soporte Mensual",
+          "price": "$200 USD",
+          "type": "/ mes",
+          "optional": true,
+          "features": [
+            "Cambios menores de contenido (textos, fotos, precios)",
+            "Mantenimiento técnico (actualizaciones, backups)",
+            "Revisión mensual de performance/SEO",
+            "Soporte operativo (respuesta en 24-48 hrs)"
+          ],
+          "definition": "Cambio menor: Editar texto, cambiar foto, actualizar precio, agregar habitación al CMS, ajustar metadatos. Si requiere más de 2 hrs de trabajo, se cotiza aparte."
         }
-      ]
+      ],
+      "valueAnchor": {
+        "comparison": [
+          {
+            "provider": "Agencia tradicional",
+            "price": "$15k-30k"
+          },
+          {
+            "provider": "Freelancer",
+            "price": "$8k-12k"
+          },
+          {
+            "provider": "Graftly",
+            "price": "$4,380",
+            "highlight": true
+          }
+        ],
+        "roi": "Si capturas 10 reservas directas al mes (vs OTA), ahorras aprox. 20% en comisiones. En un hotel de 83 habitaciones con tarifa promedio de $150/noche, eso son ~$3,000/mes en comisiones ahorradas. Recuperas la inversión en 1.5 meses."
+      }
     },
     {
       "id": "next_steps",
       "type": "cta",
-      "title": "Próximos pasos",
-      "steps": [
-        "Definir booking stack (Cloudbeds / Mews / SiteMinder)",
-        "Reunir assets (logo, fotos, textos)",
-        "Arrancar con kickoff y wireframes"
+      "title": "¿Todo Listo para Transformar tu Experiencia Digital?",
+      "subtitle": "Confirma tu aprobación para reservar el slot de desarrollo. Podemos iniciar en 5-7 días hábiles.",
+      "checklist": [
+        "Decisión de booking engine — Cloudbeds, Mews o SiteMinder",
+        "Logo en vectores — .svg, .ai o .eps",
+        "Brand guidelines — paleta de color, tipografía (si existen)",
+        "Fotos profesionales — mínimo 20-30 fotos del hotel/ubicación",
+        "Contenido base — textos en español para páginas clave (nosotros estructuramos)",
+        "Acceso a dominio — para apuntar DNS en go-live"
       ],
-      "contact": "Contacto: Graftly"
+      "optional": [
+        "Cuenta de booking engine (Cloudbeds/Mews/SiteMinder)",
+        "Traducciones en EN/FR/DE (si no, cotizamos aparte)"
+      ],
+      "ctas": [
+        {
+          "label": "Aprobar Propuesta",
+          "type": "primary",
+          "action": "mailto:hola@graftly.co?subject=Aprobar Propuesta Hotel Ibiza"
+        },
+        {
+          "label": "Agendar Llamada",
+          "type": "secondary",
+          "action": "mailto:hola@graftly.co?subject=Llamada Propuesta"
+        }
+      ],
+      "timeline": "Hoy → 5-7 días → 8-10 semanas → Antes de 2027",
+      "contact": "Graftly Team"
     }
   ]
 }
